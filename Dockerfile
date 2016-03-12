@@ -1,4 +1,4 @@
-FROM cakkineni/oss-base
+FROM cakkineni/oss-base:0.0.1
 
 ADD sensu.repo /etc/yum.repos.d/sensu.repo
 
