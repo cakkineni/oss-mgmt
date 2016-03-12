@@ -1,4 +1,4 @@
-FROM cakkineni/oss-base:0.0.1
+FROM cakkineni/oss-base
 
 ADD sensu.repo /etc/yum.repos.d/sensu.repo
 
@@ -16,4 +16,5 @@ VOLUME ["/data/log", "/data/mnesia"]
 ADD sensu.sh /usr/sbin/sensu
 RUN chmod 755 /usr/sbin/sensu
 
-EXPOSE 5672 15672 6379 4567 5671
+ADD supervisord.conf /etc/supervisor/conf.d/supervisor.conf
+EXPOSE 3000 4567 5671 5672 6379 15672 
