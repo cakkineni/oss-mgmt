@@ -1,6 +1,6 @@
 FROM cakkineni/oss-base
 
-ADD sensu_repo.repo /etc/yum.repos.d/sensu_repo.repo
+ADD sensu.repo /etc/yum.repos.d/sensu.repo
 
 RUN yum -y update; yum clean all
 RUN yum -y install epel-release; yum clean all
